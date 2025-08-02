@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pharm D Notes - Rx Wallah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .semester {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .semester-block {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .semester-block h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #4a4a4a;
+    }
+
+    .subject-btn {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 6px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .subject-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .subject-btn a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h1>Pharm.D Notes - Rx Wallah </h1>
+    <div class="semester" id="semesters"></div>
+  </div>
+
+  <script>
+    const data = {
+      "1st Year": [
+        { title: "Human Anatomy and Physiology", link: "#" },
+        { title: "Pharmaceutics", link: "#" },
+        { title: "Medicinal Biochemistry", link: "#" },
+        { title: "Pharmaceutical Inorganic Chemistry", link: "#" },
+        { title: "Pharmaceutical Organic Chemistry", link: "#" },
+		{ title: "Remedial Mathematics/Biology", link: "#" }
+      ],
+      "2nd Year": [
+        { title: "Pathophysiology ", link: "#" },
+        { title: "Pharmaceutical Microbiology", link: "#" },
+        { title: "Pharmacognosy & Phytopharmaceuticals ", link: "#" },
+        { title: "Pharmacology-I ", link: "#" },
+        { title: "Community Pharmacy", link: "#" },
+		{ title: "Pharmacotherapeutics-I", link: "#" }
+      ],
+      "3rd Year": [
+        { title: "Medicinal Chemistry", link: "#" },
+        { title: "Pharmaceutical Analysis", link: "#" },
+        { title: "Pharmacology-II ", link: "#" },
+        { title: "Pharmacotherapeutics-II ", link: "#" },
+        { title: "Pharmaceutical Formulations", link: "#" },
+		 { title: "Pharmaceutical Jurisprudence", link: "#" }
+      ],
+      "4th Year": [
+        { title: "Clinical Pharmacy", link: "#" },
+        { title: "Hospital Pharmacy", link: "#" },
+        { title: "Pharmacotherapeutics-III", link: "#" },
+        { title: "Biostatistics & Research Methodology ", link: "#" },
+        { title: "Biopharmaceutics & Pharmacokinetics ", link: "#" },
+		{ title: "Clinical Toxicology ", link: "#" }
+      ],
+      "5th Year": [
+        { title: "Clinical Research", link: "#" },
+        { title: "Pharmacoepidemiology and Pharmacoeconomics ", link: "#" },
+        { title: "Clinical Pharmacokinetics & Pharmacotherapeutic Drug Monitoring", link: "#" }
+      ],
+      "6th Year": [
+        { title: "Internship", link: "#" }
+      ]
+    };
+
+    const container = document.getElementById("semesters");
+
+    for (let semester in data) {
+      const block = document.createElement("div");
+      block.classList.add("semester-block");
+
+      const title = document.createElement("h2");
+      title.textContent = semester;
+
+      block.appendChild(title);
+
+      data[semester].forEach(subject => {
+        const btn = document.createElement("button");
+        btn.className = "subject-btn";
+
+        const a = document.createElement("a");
+        a.href = subject.link;
+        a.textContent = subject.title;
+        a.target = "_blank"; // opens in new tab
+
+        btn.appendChild(a);
+        block.appendChild(btn);
+      });
+
+      container.appendChild(block);
+    }
+  </script>
+
+</body>
+</html>
