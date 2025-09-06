@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us for Admissions - Rx Wallah</title>
+   
+	
+	
+	
+	
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+	.gradient-bg {
+    background: linear-gradient(135deg, #222222 0%, #000000 100%);
+}     
+        .floating-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 50;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+      
+		
+	
+	/* General Body & Font Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #009975; /* A professional blue */
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Main Container for Info and Form */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+/* Contact Info & Form Section Styles */
+.contact-info, .contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px; /* Ensures sections don't get too narrow */
+}
+
+.contact-info h2, .contact-form h2 {
+    color: #009975;
+    margin-top: 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Info Specific Styles */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: #009975;
+    margin-right: 1rem;
+    margin-top: 5px;
+    width: 25px;
+    text-align: center;
+}
+
+.info-item h3 {
+    margin: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.info-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Important for padding */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #004a99;
+    box-shadow: 0 0 5px rgba(0, 74, 153, 0.5);
+}
+
+.submit-btn {
+    background-color: #e5640a; /* A contrasting, friendly color */
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color:#320dc4;
+}
+
+
+
+/* Form Status Message */
+#form-status {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+}
+#form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+#form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+ .footer {
+  background-color: #1e1e24;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.logo {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.social a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0 0;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; align-items: center; }
+      .course-grid { flex-direction: column; }
+    }
+	
+</style>
+
+
+
+
+
+ <!-- Favicon & Styles -->
+  <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
+  
+  
+  
+  
+</head>
+
+
+
+
+<body>
+ <!-- Floating WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029Vb6F0V89xVJhRHpwxk1y " target="_blank" class="floating-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <header>
+        <h1>Contact Us For Admissions - Rx Wallah</h1>
+        <p>We'd love to hear from you. Please reach out with any questions or inquiries.</p>
+    </header>
+
+    <main class="contact-container">
+
+        <section class="contact-info">
+            <h2 class="font-bold">Our Information</h2>
+            <p>Get in touch with the right department.</p>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3 class="font-bold">National & International Admissions Process Available:</h3>
+                     <p> Fill the form below for admissions </p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3 class="font-bold">Phone Numbers:</h3>
+                    <p><strong>Admissions:</strong> (123) 456-7890</p>
+                    <p><strong>General Inquiry:</strong> (123) 456-7891</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3 class="font-bold">Email Address:</h3>
+                <strong>Admissions :</strong>  <a href="mailto:rxwallah@gmail.com" class="hover:underline">rxwallah@gmail.com</a>
+                </div>
+
+            </div>
+			
+			
+			
+			   <div class="pt-4">
+                            <a href="https://wa.me/919864551558" target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 px-6 py-3 rounded-lg font-bold transition">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+        </section>
+		
+
+
+       <section class="contact-form">
+    <h2 class="font-bold">Send Us a Message</h2>
+    <form id="contactForm" action="contact_handler.php" method="POST">
+        
+        <div class="mb-4">
+            <label for="name" class="block mb-2 font-medium text-gray-700">Your Name</label>
+            <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="e.g., salim Shakir">
+        </div>
+
+        <div class="mb-4">
+            <label for="Course Name" class="block mb-2 font-medium text-gray-700">Course Name</label>
+            <input type="text" name="Course Name" id="Course Name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="e.g., Pharm D, MBBS, B tech">
+        </div>
+		<div class="mb-4">
+            <label for="National/International" class="block mb-2 font-medium text-gray-700">National/International</label>
+            <input type="text" name="National/International" id="National/International" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="e.g., India, Russia, Uk, US">
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block mb-2 font-medium text-gray-700">Email Address</label>
+            <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="e.g., salimshakir@example.com">
+        </div>
+
+        <div class="mb-4">
+            <label for="phone" class="block mb-2 font-medium text-gray-700">Phone Number</label>
+            <input type="tel" name="phone" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="e.g., +1 (555) 123-4567">
+        </div>
+
+        <div class="mb-5">
+            <label for="message" class="block mb-2 font-medium text-gray-700">Your Message</label>
+            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Tell us about your Course or inquiry"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    
+    <div id="form-status" class="mt-4"></div>
+</section>
+
+    </main>
+
+    
+ <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col logo-col">
+      <div class="logo">
+        <img src="image/logo.png" alt="Logo" style="height: 40px;">
+		
+      </div>
+      <div class="social">
+        <strong>FOLLOW US :</strong> 
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://yt.openinapp.co/c72m30w"><i class="fab fa-youtube"></i></a>
+        <a href="https://insta.openinapp.co/khio4"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="https://rxwallah.com/">Home Page</a></li>
+        <li><a href="https://rxwallah.com/Course">All Courses</a></li>
+        <li><a href="https://rxwallah.com/pdf">PDF Notes</a></li>
+        <li><a href="https://rxwallah.com/Clinicalresearch">Clinical Research</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Improtant Links</h3>
+      <ul>
+        <li><a href="https://rxwallah.com/policy">Privacy Policy</a></li>
+        <li><a href="https://rxwallah.com/about">About Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+         <li><a href="https://rxwallah.com/Admissions">Admission</a></li>
+		 <li><a href="https://rxwallah.com/blogs">Blogs</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>©2025 by 
+				<a href="https://rxwallah.com/"  class="text-blue-500 hover:underline">
+				Rx Wallah
+				</a>
+				| All Rights Reserved.</p>
+            </div>
+			
+</footer>
+
+
+
+
+
+
+
+
+    <script>
+	
+	document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+
+    // This is for the STATIC version.
+    // It prevents the form from actually submitting and just shows a message.
+    // If you use the DYNAMIC PHP version, you can remove this script or adapt it.
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Stop the form from submitting the traditional way
+
+        // Get form values
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Basic validation
+        if (name === '' || email === '' || subject === '' || message === '') {
+            formStatus.textContent = 'Please fill out all fields.';
+            formStatus.className = 'error';
+            return; // Stop the function
+        }
+        
+        // Simulate a successful submission for the static page
+        formStatus.textContent = "Thank you for your message! We will get back to you soon.";
+        formStatus.className = 'success';
+        
+        // Clear the form fields
+        contactForm.reset();
+    });
+});
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+
+</body>
+</html>
