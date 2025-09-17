@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@
   <!-- ✅ Social Sharing Meta Tags -->
   <meta property="og:title" content="About Rx Wallah - Best Pharmacy Education Site">
   <meta property="og:description" content="Know more about Rx Wallah – your complete pharmacy education solution.">
-  <meta property="og:image" content="https://yourusername.github.io/repo-name/images/preview.jpg"> <!-- Replace with real image URL -->
+  <meta property="og:image" content="https://yourusername.github.io/repo-name/images/preview.jpg"> 
   <meta property="og:url" content="https://yourusername.github.io/repo-name/about.html">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -41,6 +41,38 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 	
+	
+	
+	
+	
+	
+.social-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background-color: #f5f5f5;
+    }
+
+    .social-bar a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-bar a img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 600px) {
+      .social-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+   
+   
+   
 	
 	    .footer {
   background-color: #1e1e24;
@@ -117,13 +149,16 @@
 	
   </style>
 </head>
+
+
+
 <body class="bg-gray-100 text-gray-800">
 
   <!-- Header -->
 <header class="bg-green-700 text-white py-10 text-center shadow relative">
   <!-- Home Button (left side) -->
-  <a href="https://rxwallah.com" class="absolute left-5 top-5 bg-white text-green-700 px-4 py-2 rounded hover:bg-green-100 font-semibold transition">
-   🔙 Back to Home
+  <a href="https://rxwallah.com" class="absolute left-2 top-0.5 bg-white text-green-700 px-3 py-1 rounded-full hover:bg-green-100 font-semibold transition">
+   🔙HOME
   </a>
 
   <h1 class="text-4xl font-bold mb-2">About - Rx Wallah</h1>
@@ -135,7 +170,7 @@
 
   <!-- CEO Profile Section -->
   <section class="max-w-4xl mx-auto px-4 py-8 bg-white rounded-lg shadow-md mt-8 text-center">
-    <img src="image/salim.png" alt="Salim Shikir" class="profile-pic mx-auto mb-4">
+    <img src="image/salim.png" alt="Salim Shakir" class="profile-pic mx-auto mb-4">
     <h2 class="text-xl font-bold text-green-700">Mr. Salim Shakir</h2>
     <p class="text-sm text-green-600">Founder, Rx Wallah</p>
   </section>
@@ -205,38 +240,48 @@
 <hr>
 <hr>
 <hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
 
 
+<section>
+ <!-- 🔗 Social Media Section -->
+          <h1 style="font-size: 25px; color: #1e3a8a; font-weight: bold; margin-bottom; mb-50; text-align: center;"> FOLLOW US :</h2>
+  <div class="social-bar">
+          
+    <a href="https://www.instagram.com/salimshakirr?igsh=Zno3ZWc0d3ozY3lo" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://youtube.com/@salimshakir?si=_G6PIq3wOjqKkt9Z" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+    </a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
      
+
  <!-- Footer -->
   <footer class="footer">
   <div class="footer-container">
@@ -244,33 +289,26 @@
     <div class="footer-col logo-col">
       <div class="logo">
         <img src="image/logo.png" alt="Logo" style="height: 40px;">
-		
       </div>
-      <div class="social">
-        <strong>FOLLOW US :</strong> 
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://yt.openinapp.co/c72m30w"><i class="fab fa-youtube"></i></a>
-        <a href="https://insta.openinapp.co/khio4"><i class="fab fa-instagram"></i></a>
-      </div>
+     
     </div>
-
     <div class="footer-col">
-      <h3>Quick Links</h3>
+      <h3>Quick Links:</h3>
       <ul>
         <li><a href="https://rxwallah.com/">Home Page</a></li>
-        <li><a href="https://rxwallah.com/courses">All Courses</a></li>
+        <li><a href="#courses">All Courses</a></li>
         <li><a href="https://rxwallah.com/pdf">PDF Notes</a></li>
         <li><a href="https://rxwallah.com/Clinicalresearch">Clinical Research</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h3>Improtant Links</h3>
+     <h3>Improtant Links:</h3>
       <ul>
         <li><a href="https://rxwallah.com/policy">Privacy Policy</a></li>
         <li><a href="https://rxwallah.com/about">About Us</a></li>
         <li><a href="#">Terms & Conditions</a></li>
-         <li><a href="https://rxwallah.com/Admissions">Admission</a></li>
+         <li><a href="https://rxwallah.com/contacts">Admission</a></li>
 		 <li><a href="https://rxwallah.com/blogs">Blogs</a></li>
       </ul>
     </div>
@@ -290,7 +328,6 @@
 
 </body>
 </html>
-
 
 
 
