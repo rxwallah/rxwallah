@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy & Healthcare Blogs - Rx Wallah</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="canonical" href="https://rxwallah.com/blogs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	
+	 <meta name="description" content="Explore the latest articles on B.Pharm, D.Pharm, clinical research, study tips, and healthcare news from the experts at Rx Wallah. Your go-to source for pharmacy knowledge.">
+    <meta name="keywords" content="pharmacy blogs, healthcare articles, B.Pharm study tips, D.Pharm notes, clinical research updates, Rx Wallah blog, pharmacy education">
+    <meta name="author" content="Rx Wallah Team">
+    
+    <meta property="og:title" content="Pharmacy & Healthcare Blogs - Rx Wallah">
+    <meta property="og:description" content="Get the latest updates, study tips, and insights into the world of pharmacy and healthcare.">
+    <meta property="og:image" content="https://rxwallah.com/image/og-image-blogs.png"> <meta property="og:url" content="https://rxwallah.com/blogs"> <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Rx Wallah Home",
+        "item": "https://rxwallah.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blogs",
+        "item": "https://rxwallah.com/blogs"
+      }]
+    }
+    </script>
+    
+	
+	
+ <!-- Favicon & Styles -->
+  <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
+  
+  
+	
+	
+	
+    
+<style>	
+    /* General Body Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+    
+    /* ADDED: Styles for the main blog page header */
+    .blog-page-header {
+        background-color: #0056b3;
+        color: white;
+        text-align: center;
+        padding: 2.5rem 1rem;
+    }
+
+    .blog-page-header h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+    }
+
+    /* Styles for Navigation Bar */
+    .gradient-bg {
+        background: linear-gradient(135deg, #222222 0%, #000000 100%);
+    }     
+    
+    /* Styles for Floating WhatsApp Button */
+    .floating-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 50;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+      
+    /* Main Blog Container */
+    .blog-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Individual Blog Post Styles */
+    .blog-post {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .blog-post img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        padding: 1.5rem;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem;
+        padding: 0;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .blog-post p {
+        padding: 0;
+        margin: 0 0 1rem 0;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .blog-post a.read-more-btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .blog-post a.read-more-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Footer style code */
+    .footer {
+        background-color: #1e1e24;
+        color: #fff;
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 30px;
+    }
+
+    .footer-col {
+        flex: 1 1 200px;
+        min-width: 200px;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: #fff;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-col ul li a:hover {
+        color: #fff;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid #333;
+        font-size: 14px;
+        color: #aaa;
+    }
+    
+    .footer-bottom a {
+        color: #3a96f8;
+        text-decoration: none;
+    }
+    
+    .footer-bottom a:hover {
+        text-decoration: underline;
+    }
+</style>
+	
+</head>
+
+<body class="font-sans bg-gray-50">
+    <a href="https://whatsapp.com/channel/0029Vb6F0V89xVJhRHpwxk1y" target="_blank" class="floating-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+	
+ <nav class="gradient-bg text-white shadow-md ">
+    <div class="container mx-auto px-5 py-3">
+        <div class="flex items-center justify-between">
+            <a href="http://rxwallah.com/">
+                <div class="flex items-center">
+                     <img src="image/logo.png" alt="RX Wallah logo" class="h-12 mr-10">
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+               <a href="https://rxwallah.com/" class="block py-2 hover:text-teal-300 transition">Home</a>
+	           <a href="https://rxwallah.com/about" class="block py-2 hover:text-teal-300 transition">About</a>
+		       <a href="#courses" class="block py-2 hover:text-teal-300 transition">Courses</a>
+               <a href="https://rxwallah.com/contacts" class="block py-2 hover:text-teal-300 transition">Admissions</a>
+            
+                <div class="relative group">   
+                  <button id="aboutDropdownBtn" class="hover:text-teal-300 focus:outline-none py-2 transition">
+                    Blogs ▾
+                  </button>
+                  <div class="absolute hidden group-hover:block bg-white text-black py-2 rounded shadow-lg z-50 w-48">
+                    <a href="https://rxwallah.com/blogs" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+	                <a href="https://rxwallah.com/Clinicalresearch" class="block px-4 py-2 hover:bg-gray-100">Clinical Research</a>
+                    <a href="https://rxwallah.com/contacts" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
+                  </div>
+                </div>
+			   
+                <a href="tel:8453915151" style="background-color: #0099a1;" class="ml-4 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
+                    📞 Call Now
+			    </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+            <a href="https://rxwallah.com/" class="block py-2 hover:bg-gray-700 rounded px-4">Home</a>
+            <a href="https://rxwallah.com/about" class="block py-2 hover:bg-gray-700 rounded px-4">About</a>
+            <a href="https://rxwallah.com/Clinicalresearch" class="block py-2 hover:bg-gray-700 rounded px-4">Clinical Research</a>
+            <a href="#courses" class="block py-2 hover:bg-gray-700 rounded px-4">Courses</a>
+            <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-gray-700 rounded px-4">Admissions</a>
+            <a href="https://rxwallah.com/blogs" class="block py-2 hover:bg-gray-700 rounded px-4">Blogs</a>
+            <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-gray-700 rounded px-4">Contact Us</a>
+            <a href="https://rxwallah.com/policy" class="block py-2 hover:bg-gray-700 rounded px-4">Privacy Policy</a>
+            <a href="tel:8453915151" style="background-color: #0099a1;" class="block mt-2 py-2 hover:bg-teal-600 text-white text-center rounded-full shadow-md px-4 transition duration-300">
+                📞 Call Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+
+<header>
+
+
+
+<h1 class="text-3xl font-bold text-center mb-2"> <i class="inline bg-yellow-100">Pharmacy & Healthcare Blogs - Rx Wallah</i></h1>
+			
+               <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                             We provide end-to-end software development services tailored to your business needs
+                        </p>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="blog-container">
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/DEB887/000000" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>The Future of Online Learning</h2>
+            <p>Explore the latest trends and technologies shaping the future of education...</p>
+            <div class="post-meta">
+                <span>Published: <time datetime="2025-09-15">Sep 15, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+    
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/7FFFD4/000000" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>Tips for Effective Study Habits</h2>
+            <p>Learn how to improve your focus, retain more information, and make the most of your study time...</p>
+            <div class="post-meta">
+                <span>Published: <time datetime="2025-09-14">Sep 14, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+    
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/DC143C/FFFFFF" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>The Importance of STEM Education</h2>
+            <p>Discover why Science, Technology, Engineering, and Math are crucial for the next generation...</p>
+            <div class="post-meta">
+                <span>Published: <time datetime="2025-09-12">Sep 12, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+    
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/FFD700/000000" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>Gamification in the Classroom</h2>
+            <p>See how game-like elements are making learning more fun and effective for students of all ages...</p>
+            <div class="post-meta">
+                <span>Published: <time datetime="2025-09-10">Sep 10, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+    
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/6495ED/FFFFFF" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>The Benefits of Bilingual Education</h2>
+            <p>Uncover the cognitive advantages and cultural benefits of learning a second language from a young age...</p>
+             <div class="post-meta">
+                <span>Published: <time datetime="2025-09-08">Sep 08, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+    
+    <article class="blog-post">
+        <img src="https://via.placeholder.com/400x250/9932CC/FFFFFF" alt="Blog Post Image">
+        <div class="post-content">
+            <h2>Preparing Students for the Jobs of Tomorrow</h2>
+            <p>What skills will be most in-demand in the future, and how can we prepare students for success?...</p>
+            <div class="post-meta">
+                <span>Published: <time datetime="2025-09-05">Sep 05, 2025</time></span>
+                <span>☕ 1 min</span>
+            </div>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </article>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+         <img src="image/logo.png" alt="Logo" style="height: 40px;">
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links:</h3>
+            <ul>
+                <li><a href="https://rxwallah.com/">Home Page</a></li>
+                <li><a href="#">All Courses</a></li>
+                <li><a href="#">PDF Notes</a></li>
+                <li><a href="#">Clinical Research</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Important Links:</h3>
+            <ul>
+                <li><a href="https://rxwallah.com/policy">Privacy Policy</a></li>
+                <li><a href="https://rxwallah.com/about">About Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="https://rxwallah.com/contacts">Admission</a></li>
+                <li><a href="https://rxwallah.com/blogs">Blogs</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>©2025 by <a href="https://rxwallah.com">Rx Wallah</a> | All Rights Reserved.</p>
+    </div>
+</footer>
+	
+<script>
+    // Mobile menu toggle
+    document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if(targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
