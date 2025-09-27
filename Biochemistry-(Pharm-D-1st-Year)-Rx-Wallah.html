@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Medicinal Biochemistry (Pharm D 1st Year) - Rx Wallah</title>
+ 
+	 <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="canonical" href="https://rxwallah.com/Medicinal-Biochemistry-(Pharm-D-1st-Year)-Rx-Wallah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+ <!-- Favicon & Styles -->
+  <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
+  
+  
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .semester {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .semester-block {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .semester-block h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #4a4a4a;
+    }
+
+    .subject-btn {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 6px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .subject-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .subject-btn a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h1 class="text-3xl font-bold text-center mb-10"> Medicinal Biochemistry (Pharm D 1st Year) - Rx Wallah </h1>
+    <div class="semester" id="semesters"></div>
+  </div>
+
+  <script>
+    const data = {
+      "Chapter 1": [
+        { title: "1.Introduction to biochemistry", link: "https://drive.google.com/file/d/1eCnnYjA24aShU3z-t1A5esL1SQlnrpuh/view?usp=drivesdk" }
+      ],
+	  
+       "Chapter 2": [
+        { title: "2.Enzymes", link: "https://drive.google.com/file/d/1hWhdQr3jcYZpgdevHzWWHYtd21rdO2u1/view?usp=drivesdk" }
+      ],
+	  
+	  
+      "Chapter 3": [
+        { title: "3.Carbohydrate metabolism", link: "https://drive.google.com/file/d/1o0f9oW2CbthtbNVnYvdtLt1mRcyOtXNp/view?usp=drivesdk" }
+      ],
+	  
+      "Chapter 4": [
+        { title: "4.Lipid metabolism", link: "https://drive.google.com/file/d/1ummxUvtwCM79c86yOizA2JzbEOCS00nG/view?usp=drivesdk" }
+      ],
+	  
+     "Chapter 5": [
+        { title: "5.Biological oxidation", link: "https://drive.google.com/file/d/1B0wEZTJdL0pr8v01PO1XwH3DX-EDWDx4/view?usp=drivesdk" }
+      ],
+	  
+	  
+      "Chapter 6": [
+        { title: "6.Protein and amino acid metabolism", link: "https://drive.google.com/file/d/13_06aEvFv0sM2Si5DMh5xIM4jTGaIP__/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 7": [
+        { title: "7.Nucleic acid metabolism", link: "https://drive.google.com/file/d/1JpIMN0Uc-5R4cvKMIjDvc9JeI8VxuqXf/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 8": [
+        { title: "8.Introduction to clinical chemistry: Cell", link: "https://drive.google.com/file/d/10TH7xvwbOYMN30chK1xvrUaknK8DO8Q6/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 9": [
+        { title: "9.The kidney function tests", link: "https://drive.google.com/file/d/1H1241XwFmsz3lExkkgBAt7p_TpDH2Xah/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 10": [
+        { title: "10.Liverfunction tests", link: "https://drive.google.com/file/d/1IEtQMEtWCbre30Fld7vVun1vfUTktd-W/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 11": [
+        { title: "11.Lipid profile tests", link: "https://drive.google.com/file/d/1RYb0UyX_AWq5q3eZYxEl85x4pjZt_j8e/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 12": [
+        { title: "12.Immuno chemical techniques", link: "https://drive.google.com/file/d/1e8lYKJCoLfg22jUHbgdSc6j7Gacmva9F/view?usp=drivesdk" }
+      ],
+	  
+	  "Chapter 13": [
+        { title: "13.Electrolytes", link: "https://drive.google.com/file/d/149menuC4_0TpukOLjTsnqubO37cv9zc3/view?usp=drivesdk" }
+      ],
+	  
+	  
+	  
+	  
+	  
+    };
+
+    const container = document.getElementById("semesters");
+
+    for (let semester in data) {
+      const block = document.createElement("div");
+      block.classList.add("semester-block");
+
+      const title = document.createElement("h2");
+      title.textContent = semester;
+
+      block.appendChild(title);
+
+      data[semester].forEach(subject => {
+        const btn = document.createElement("button");
+        btn.className = "subject-btn";
+
+        const a = document.createElement("a");
+        a.href = subject.link;
+        a.textContent = subject.title;
+        a.target = "_blank"; // opens in new tab
+
+        btn.appendChild(a);
+        block.appendChild(btn);
+      });
+
+      container.appendChild(block);
+    }
+  </script>
+
+</body>
+</html>
