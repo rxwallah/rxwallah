@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Pharmaceutics (Pharm D 1st Year) - Rx Wallah</title>
+ 
+	 <script src="https://cdn.tailwindcss.com"></script>
+	<link rel="canonical" href="https://rxwallah.com/Pharmaceutics-(Pharm-D-1st-Year)-Rx-Wallah">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+ <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
+  
+  
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .semester {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .semester-block {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .semester-block h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #4a4a4a;
+    }
+
+    .subject-btn {
+      display: block;
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      background: #f0f0f0;
+      border: none;
+      border-radius: 6px;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+
+    .subject-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .subject-btn a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+  </style>
+  
+ 
+</head>
+<body>
+
+
+  <div class="container">
+    <h1 class="text-3xl font-bold text-center mb-10"> Pharmaceutics (Pharm D 1st Year) - Rx Wallah </h1>
+    <div class="semester" id="semesters"></div>
+  </div>
+  
+  
+  
+
+
+
+  <script>
+    const data = {
+      "Chapter 1": [
+        { title: "1) a)Introduction to dosage forms
+		b)Prescription
+		c)Posology", link: "#" }
+      ],
+	  
+       "Chapter 2": [
+        { title: "2. Historical back ground and development of profession of pharmacy and pharmaceutical 
+industry in brief.", link: "#" }
+      ],
+	  
+	  
+      "Chapter 3": [
+        { title: "3.Development of Indian Pharmacopoeia and introduction to other Pharmacopoeias such as
+BP,USP, European Pharmacopoeia, Extra pharmacopoeia and Indian national formulary.", link: "#" }
+      ],
+	  
+      "Chapter 4": [
+        { title: "4. Weights and measures, Calculations involving percentage solutions,  allegation,proof spirit,isotonic solutionsetc.", link: "#" }
+      ],
+	  
+     "Chapter 5": [
+        { title: "5. Powders and Granules", link: "#" }
+      ],
+	  
+	  
+      "Chapter 6": [
+        { title: "6. Monophasic Dosage forms", link: "#" }
+      ],
+	  
+	  "Chapter 7": [
+        { title: "7.Biphasic dosage forms", link: "#" }
+      ],
+	  
+	  "Chapter 8": [
+        { title: "8.Suppositories and pessaries", link: "#" }
+      ],
+	  
+	  "Chapter 9": [
+        { title: "9. Galenicals", link: "#" }
+      ],
+	  
+	  "Chapter 10": [
+        { title: "10.Pharmaceutical calculations.", link: "#" }
+      ],
+	  
+	  "Chapter 11": [
+        { title: "11.Surgical aids", link: "#" }
+      ],
+	  
+	  "Chapter 12": [
+        { title: "12.Incompatibilities", link: "#" }
+      ],
+	  
+	  
+	  
+    };
+
+    const container = document.getElementById("semesters");
+
+    for (let semester in data) {
+      const block = document.createElement("div");
+      block.classList.add("semester-block");
+
+      const title = document.createElement("h2");
+      title.textContent = semester;
+
+      block.appendChild(title);
+
+      data[semester].forEach(subject => {
+        const btn = document.createElement("button");
+        btn.className = "subject-btn";
+
+        const a = document.createElement("a");
+        a.href = subject.link;
+        a.textContent = subject.title;
+        a.target = "_blank"; // opens in new tab
+
+        btn.appendChild(a);
+        block.appendChild(btn);
+      });
+
+      container.appendChild(block);
+    }
+  </script>
+</body>
+</html>
