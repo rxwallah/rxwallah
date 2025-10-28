@@ -1,0 +1,477 @@
+<!Doctype html>
+<html lang="en">
+<head>
+<title> Job Vacancy - rxwallah</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="jobvacancy-rxwallah, naukri,">
+
+<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="canonical" href="https://rxwallah.com/jobvacancy">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	
+	
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Rx Wallah Home",
+        "item": "https://rxwallah.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "jobvacancy",
+        "item": "https://rxwallah.com/jobvacancy"
+      }]
+    }
+    </script>
+    
+	
+	
+ <!-- Favicon & Styles -->
+  <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
+  
+   <style>
+    
+    /* General Body Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+ /* Styles for Navigation Bar */
+    .gradient-bg {
+        background: linear-gradient(135deg, #222222 0%, #000000 100%);
+    }     
+    
+    /* Styles for Floating WhatsApp Button */
+    .floating-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 50;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+	</style>
+<style>
+/* ADDED: Styles for the main CAREERS page header */
+    .careers-header {
+        
+        color: green;
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .careers-header h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: bold;
+    }
+    
+    .careers-header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 1rem auto 0;
+        opacity: 0.9;
+    }
+	
+	
+	
+/* Main Job Container */
+    .job-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    /* Individual Job Listing Styles */
+    .job-listing {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-wrap: wrap; /* Mobile par stack hone ke liye */
+        justify-content: space-between;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .job-listing:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    }
+    
+    .job-details {
+        flex: 1 1 400px; /* Badi screen par grow karega */
+    }
+    
+    .job-details h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .job-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+    
+    .job-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .job-apply {
+        flex-shrink: 0; /* Button ko shrink nahi hone dega */
+        margin-top: 1rem; /* Mobile par space dega */
+    }
+    
+    .apply-btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #007bff; /* Blue button */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+    
+    .apply-btn:hover {
+        background-color: #0056b3;
+    }
+	
+	
+    .footer {
+  background-color: #1e1e24;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.logo {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.social a {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0 0;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #aaa;
+}
+
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; align-items: center; }
+      .course-grid { flex-direction: column; }
+    }
+ 
+</style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <a href="https://whatsapp.com/channel/0029Vb6F0V89xVJhRHpwxk1y" target="_blank" class="floating-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+	
+ <nav class="gradient-bg text-white shadow-md ">
+    <div class="container mx-auto px-5 py-3">
+        <div class="flex items-center justify-between">
+            <a href="http://rxwallah.com/">
+                <div class="flex items-center">
+                     <img src="image/logo.png" alt="RX Wallah logo" class="h-12 mr-10">
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+               <a href="https://rxwallah.com/" class="block py-2 hover:text-teal-300 transition">Home</a>
+	           <a href="https://rxwallah.com/about" class="block py-2 hover:text-teal-300 transition">About</a>
+		       <a href="#courses" class="block py-2 hover:text-teal-300 transition">Courses</a>
+               <a href="https://rxwallah.com/contacts" class="block py-2 hover:text-teal-300 transition">Admissions</a>
+            
+                <div class="relative group">   
+                  <button id="aboutDropdownBtn" class="hover:text-teal-300 focus:outline-none py-2 transition">
+                    Blogs ▾
+                  </button>
+                  <div class="absolute hidden group-hover:block bg-white text-black py-2 rounded shadow-lg z-50 w-48">
+                    <a href="https://rxwallah.com/blogs" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+	                <a href="https://rxwallah.com/jobvacancy" class="block px-4 py-2 hover:bg-gray-100">Job Vacancy</a>
+                    <a href="https://rxwallah.com/contacts" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a>
+                  </div>
+                </div>
+			   
+                <a href="tel:8453915151" style="background-color: #0099a1;" class="ml-4 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
+                    📞 Call Now
+			    </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+            <a href="https://rxwallah.com/" class="block py-2 hover:bg-gray-700 rounded px-4">Home</a>
+            <a href="https://rxwallah.com/about" class="block py-2 hover:bg-gray-700 rounded px-4">About</a>
+            <a href="https://rxwallah.com/jobvacancy" class="block py-2 hover:bg-gray-700 rounded px-4">Job Vacancy</a>
+            <a href="#" class="block py-2 hover:bg-gray-700 rounded px-4">Courses</a>
+            <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-gray-700 rounded px-4">Admissions</a>
+            <a href="https://rxwallah.com/blogs" class="block py-2 hover:bg-gray-700 rounded px-4">Blogs</a>
+            <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-gray-700 rounded px-4">Contact Us</a>
+            <a href="https://rxwallah.com/policy" class="block py-2 hover:bg-gray-700 rounded px-4">Privacy Policy</a>
+            <a href="tel:8453915151" style="background-color: #0099a1;" class="block mt-2 py-2 hover:bg-teal-600 text-white text-center rounded-full shadow-md px-4 transition duration-300">
+                📞 Call Now
+            </a>
+        </div>
+    </div>
+</nav>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+
+
+
+
+
+
+
+    <header class="careers-header">
+        <h1>Find Your Dream Job Now - Rx Wallah</h1>
+        <p>Join our mission to revolutionize pharmacy education. We're looking for passionate individuals to join the Rx Wallah team!</p>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+<main class="job-container">
+        
+        <article class="job-listing">
+            <div class="job-details">
+                <h2>Clinical Research Coordinator</h2>
+                <div class="job-meta">
+                    <span><i class="fas fa-location-dot"></i> Bangalore, IN</span>
+                    <span><i class="fas fa-clock"></i> Full-Time</span>
+                </div>
+            </div>
+            <div class="job-apply">
+                <a href="https://rxwallah.com/contacts" class="apply-btn">Apply Now</a>
+            </div>
+        </article>
+		
+		
+		
+		
+		
+		
+        
+        <article class="job-listing">
+            <div class="job-details">
+                <h2>Digital Marketing Specialist</h2>
+                <div class="job-meta">
+                    <span><i class="fas fa-location-dot"></i> Remote</span>
+                    <span><i class="fas fa-clock"></i> Full-Time</span>
+                </div>
+            </div>
+            <div class="job-apply">
+                <a href="https://rxwallah.com/contacts" class="apply-btn">Apply Now</a>
+            </div>
+        </article>
+        
+		
+		
+		
+		
+        <article class="job-listing">
+            <div class="job-details">
+                <h2>Pharmacy Content Writer (Part-Time)</h2>
+                <div class="job-meta">
+                    <span><i class="fas fa-location-dot"></i> Remote</span>
+                    <span><i class="fas fa-clock"></i> Part-Time</span>
+                </div>
+            </div>
+            <div class="job-apply">
+                <a href="https://rxwallah.com/contacts" class="apply-btn">Apply Now</a>
+            </div>
+        </article>
+        
+		
+		
+		
+        <article class="job-listing">
+            <div class="job-details">
+                <h2>Student Admissions Counselor</h2>
+                <div class="job-meta">
+                    <span><i class="fas fa-location-dot"></i> Mumbai, IN</span>
+                    <span><i class="fas fa-clock"></i> Full-Time</span>
+                </div>
+            </div>
+            <div class="job-apply">
+                <a href="https://rxwallah.com/contacts" class="apply-btn">Apply Now</a>
+            </div>
+        </article>
+        
+		
+		
+		
+		
+        <article class="job-listing">
+            <div class="job-details">
+                <h2>Full-Stack Web Developer</h2>
+                <div class="job-meta">
+                    <span><i class="fas fa-location-dot"></i> Remote</span>
+                    <span><i class="fas fa-clock"></i> Contract</span>
+                </div>
+            </div>
+            <div class="job-apply">
+                <a href="https://rxwallah.com/contacts" class="apply-btn">Apply Now</a>
+            </div>
+        </article>
+
+    </main>
+
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col logo-col">
+      <div class="logo">
+        <img src="image/logo.png" alt="Logo" style="height: 40px;">
+      </div>
+     
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links:</h3>
+      <ul>
+        <li><a href="https://rxwallah.com/">Home Page</a></li>
+        <li><a href="#courses">All Courses</a></li>
+        <li><a href="https://rxwallah.com/pdf">PDF Notes</a></li>
+        <li><a href="https://rxwallah.com/jobvacancy">Job Vacancy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+     <h3>Improtant Links:</h3>
+      <ul>
+        <li><a href="https://rxwallah.com/policy">Privacy Policy</a></li>
+        <li><a href="https://rxwallah.com/about">About Us</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+         <li><a href="https://rxwallah.com/contacts">Admission</a></li>
+		 <li><a href="https://rxwallah.com/blogs">Blogs</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+ <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>©2025 by 
+				<a href="https://rxwallah.com/"  class="text-blue-500 hover:underline">
+				Rx Wallah
+				</a>
+				| All Rights Reserved.</p>
+            </div>
+			
+</footer>
+	
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                if(targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
