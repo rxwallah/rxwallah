@@ -1,636 +1,776 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    
-	
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Rx Wallah is the ultimate platform for B.Pharm, D.Pharm and M.Pharm notes, syllabus, and preparation material. Boost your pharmacy education with us.">
-<meta name="keywords" content="Rx Wallah, BPharm Notes, DPharm Notes, Pharmacy Syllabus, MPharm Study Material, Pharmacy Education, RxWallah Study, Best Pharmacy Website">
-<meta name="author" content="Rx Wallah Team">
+    <meta name="description"
+        content="Rx Wallah is the ultimate platform for B.Pharm, D.Pharm and M.Pharm notes, syllabus, and preparation material. Boost your pharmacy education with us.">
+    <meta name="keywords"
+        content="Rx Wallah, BPharm Notes, DPharm Notes, Pharmacy Syllabus, MPharm Study Material, Pharmacy Education, RxWallah Study, Best Pharmacy Website">
+    <meta name="author" content="Rx Wallah Team">
 
-<meta property="og:title" content="Rx Wallah - Pharmacy Education Hub">
-<meta property="og:description" content="Get B.Pharm and D.Pharm notes, previous year questions, and syllabus in one place.">
-<meta property="og:image" content="https://rxwallh.com/image/logo.png">
-<meta property="og:url" content="https://rxwallh.com">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Rx Wallah is your one-stop pharmacy education platform for B.Pharm, D.Pharm, and M.Pharm notes, syllabus, and more.">
-<meta name="keywords" content="Rx Wallah, Pharmacy Notes, B.Pharm, D.Pharm, M.Pharm, Pharmacy Study Material">
-<link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="Rx Wallah - Pharmacy Education Hub">
+    <meta property="og:description"
+        content="Get B.Pharm and D.Pharm notes, previous year questions, and syllabus in one place.">
+    <meta property="og:image" content="https://rxwallh.com/image/logo.png">
+    <meta property="og:url" content="https://rxwallah.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description"
+        content="Rx Wallah is your one-stop pharmacy education platform for B.Pharm, D.Pharm, and M.Pharm notes, syllabus, and more.">
+    <meta name="keywords" content="Rx Wallah, Pharmacy Notes, B.Pharm, D.Pharm, M.Pharm, Pharmacy Study Material">
 
-       
-	   <title> Rx Wallah - Best Pharmacy Study Platform </title>
+    <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
 
 
+    <title>Rx Wallah - Best Pharmacy Study Platform</title>
 
-   <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
-<meta name="twitter:image" content="https://rxwallh.com/image/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-
- <link rel="icon" href="https://rxwallah.com/image/favicon.png" type="image/png">
-  
-  
-  
-
-
-   <style>
-    
-     .gradient-bg {
-    background: linear-gradient(135deg, #222222 0%, #000000 100%);
-}
-
-
-       
-        .floating-button {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 50;
-            animation: pulse 2s infinite;
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+
+        /* Modern Glassmorphism Navbar */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-      
-		
-		
-		
-.hero {
-  background-color: #23b1b7;
-  padding: 60px 20px;
-  color: white;
-}
 
-.hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+        /* Animated Gradient Background */
+        .hero-gradient {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #004d40, #006064);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
 
-.hero-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
 
-.hero-image {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-  text-align: center;
-}
+            50% {
+                background-position: 100% 50%;
+            }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
-.hero-text {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-}
+        /* Float Animation */
+        .float-anim {
+            animation: float 4s ease-in-out infinite;
+        }
 
-.hero-text h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+        @keyframes float {
 
-.hero-text p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
 
-.hero-text .btn {
-  background-color: #f97316;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 9999px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
+            50% {
+                transform: translateY(-20px);
+            }
+        }
 
-.hero-text .btn:hover {
-  background-color: #ea580c;
-}
+        /* Container styling */
+        .courses-section {
+            padding: 80px 20px;
+            background: #f8fafc;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
 
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0f172a;
+        }
 
+        .divider {
+            width: 80px;
+            height: 5px;
+            background: #14b8a6;
+            margin: 15px auto 0;
+            border-radius: 50px;
+        }
 
-    .btn {
-      padding: 10px 25px;
-      background-color: white;
-      color: #004080;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+        .course-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-  .courses {
-  text-align: center;
-  padding: 40px 20px;
-}
+        .course-card {
+            position: relative;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 32px;
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.5s ease;
+            overflow: hidden;
+        }
 
-.course-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.course-card {
-  display: block;
-  width: 90%;
-  max-width: 280px;
-  background-color: #f0f9ff;
-  color: #1e293b;
-  text-decoration: none;
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s, background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: auto;
-}
-
-.course-card:hover {
-  background-color: #e0f2fe;
-  transform: translateY(-5px);
-}
-
-
-
-
-
-
-    /* --- ADDED: Keyframe Animation for Cards --- */
-    @keyframes fadeInUp {
-        from {
+        .course-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), transparent);
             opacity: 0;
-            transform: translateY(20px);
+            transition: opacity 0.5s ease;
         }
-        to {
+
+        .course-card:hover::before {
             opacity: 1;
-            transform: translateY(0);
         }
-    }
-	
-    /* ADDED: Reusable animation class */
-    .animate-fade-in-up {
-        opacity: 0; /* Start hidden */
-        animation: fadeInUp 0.5s ease-out forwards; /* Apply animation */
-    }
+
+        .course-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+            border-color: #14b8a6;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            font-size: 20px;
+            color: #ef4444;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover .arrow {
+            transform: translate(4px, -4px);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .course-card:hover .icon-box {
+            transform: scale(1.15) rotate(6deg);
+        }
+
+        .icon-box.teal {
+            background: #ecfeff;
+            color: #14b8a6;
+        }
+
+        .icon-box.blue {
+            background: #eff6ff;
+            color: #3b82f6;
+        }
+
+        .icon-box.orange {
+            background: #fff7ed;
+            color: #f97316;
+        }
+
+        .icon-box.purple {
+            background: #faf5ff;
+            color: #8b5cf6;
+        }
+
+        .icon-box.pink {
+            background: #fdf2f8;
+            color: #ec4899;
+        }
+
+        .course-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .course-card:hover h3 {
+            color: #14b8a6;
+        }
+
+        .course-card p {
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        /* Hidden Mobile Menu Animation */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        #mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+    <style>
+        .btn-dynamic {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Course Button: Animated Gradient Pulse */
+        .btn-course {
+            background: linear-gradient(45deg, #f97316, #fb923c, #ea580c);
+            background-size: 200% 200%;
+            animation: gradientShift 3s ease infinite;
+            box-shadow: 0 15px 30px -10px rgba(249, 115, 22, 0.8);
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Jobs Button: Glass Glow */
+        .btn-jobs {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 30px -10px rgba(45, 212, 191, 0.5);
+        }
+
+        .btn-jobs:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #2dd4bf;
+            /* Teal glow on hover */
+            box-shadow: 0 0 20px rgba(45, 212, 191, 0.3);
+        }
+
+        /* Arrow Slide Animation */
+        .icon-slide {
+            transition: transform 0.s ease;
+        }
+
+        .btn-dynamic:hover .icon-slide {
+            transform: translateX(5px);
+        }
+
+        /* Add this inside your tag */
+        .btn-course {
+            box-shadow: 0 10px 20px -5px rgba(249, 115, 22, 0.6);
+            /* Orange Glow */
+        }
+
+        .btn-jobs {
+            box-shadow: 0 10px 20px -5px rgba(45, 212, 191, 0.4);
+            /* Teal Glow */
+        }
+    </style>
 
 
+    <style>
+        .rx-info {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #f8fafc, #eef2ff);
+        }
+
+        .rx-container {
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .rx-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 50px;
+        }
+
+        .rx-title span {
+            color: #0ea5e9;
+        }
+
+        .rx-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .rx-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+        }
+
+        .rx-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(14, 165, 233, 0.25);
+        }
+
+        .rx-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .rx-content {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .rx-content h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .rx-content p {
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .rx-link {
+            font-weight: 700;
+            color: #0ea5e9;
+        }
+    </style>
 
 
+    <style>
+        .follow-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #f8fafc, #eef2ff);
+            text-align: center;
+        }
+
+        .follow-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+        }
+
+        .social-bar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .social-bar a {
+            width: 70px;
+            height: 70px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+        }
+
+        .social-bar a:hover {
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 20px 45px rgba(30, 58, 138, 0.25);
+        }
+
+        .social-bar img {
+            width: 34px;
+            height: 34px;
+        }
+    </style>
 
 
-.social-bar {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      background-color: #f5f5f5;
-    }
-
-    .social-bar a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-bar a img:hover {
-      transform: scale(1.2);
-    }
-
-    @media (max-width: 600px) {
-      .social-bar {
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-    }
-   
-
-    .footer {
-  background-color: #1e1e24;
-  color: #fff;
-  font-family: sans-serif;
-  padding: 40px 20px 20px;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-  gap: 30px;
-}
-
-.footer-col {
-  flex: 1 1 200px;
-  min-width: 200px;
-}
-
-.footer-col h3 {
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #fff;
-  border-bottom: 1px solid #444;
-  padding-bottom: 5px;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-col ul li {
-  margin-bottom: 10px;
-}
-
-.footer-col ul li a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-col ul li a:hover {
-  color: #fff;
-}
-
-.logo {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.social a {
-  margin-right: 10px;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  text-align: center;
-  padding: 15px 0 0;
-  border-top: 1px solid #333;
-  font-size: 14px;
-  color: #aaa;
-}
-
-
-    @media (max-width: 768px) {
-      nav ul { flex-direction: column; align-items: center; }
-      .course-grid { flex-direction: column; }
-    }
-  </style>
 </head>
 
+<body class="bg-slate-50 text-slate-900">
 
-
-
-
-
-<body class="font-sans bg-gray-50">
-    <!-- Floating WhatsApp Button -->
-    <a href="https://whatsapp.com/channel/0029Vb6F0V89xVJhRHpwxk1y " target="_blank" class="floating-button bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
-        <i class="fab fa-whatsapp text-2xl"></i>
+    <a href="https://whatsapp.com/channel/0029Vb6F0V89xVJhRHpwxk1y" target="_blank"
+        class="fixed bottom-8 right-8 z-50 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-transform hover:scale-110 active:scale-95">
+        <i class="fab fa-whatsapp text-3xl"></i>
     </a>
-	
-	
- <!-- Navigation -->
-<nav class="gradient-bg text-white shadow-md fixed top-0 w-full z-50">
-    <div class="container mx-auto px-5 py-3">
-        <div class="flex  items-center justify-between">
-            <!-- Logo -->
-            <a href="https://rxwallah.com/">
-                <div class="flex items-center">
-                    <img src="image/logo.png" alt="RX Wallah logo" class="h-12 mr-10">
+
+    <nav class="glass-nav text-white fixed top-0 w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="https://rxwallah.com/" class="flex items-center space-x-2">
+                    <img src="image/logo.png" alt="Logo" class="h-10 hover:opacity-80 transition">
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="https://rxwallah.com/?Home"
+                        class="px-4 py-2 rounded-lg hover:bg-white/20 transition">Home</a>
+                    <a href="https://rxwallah.com/about"
+                        class="px-4 py-2 rounded-lg hover:bg-white/10 transition">About</a>
+                    <a href="https://rxwallah.com/#courses"
+                        class="px-4 py-2 rounded-lg hover:bg-white/10 transition">Courses</a>
+                    <a href="https://rxwallah.com/about"
+                        class="px-4 py-2 rounded-lg hover:bg-white/10 transition">Admission</a>
+
+                    <div class="relative group">
+                        <button id="ResourcesDropdownBtn"
+                            class="px-6  rounded  py-2 hover:bg-white/10  focus:outline-none ">
+                            Resources ▾
+                        </button>
+
+
+
+
+
+                        <div
+                            class="absolute hidden group-hover:block bg-slate-800 rounded shadow-lg z-50 w-40 border border-slate-700">
+                            <a href="https://rxwallah.com/blogs" class="block px-4 py-2 hover:bg-slate-700">Blogs</a>
+                            <a href="https://rxwallah-jobs-vacancy-medical.gt.tc/?rxwallah.com/jobvacancy"
+                                class="block px-4 py-2 hover:bg-slate-700">Jobs Vacancy</a>
+                            <a href="https://rxwallah.com/contacts" class="block px-4 py-2 hover:bg-slate-700">Contact
+                                Us</a>
+                        </div>
+                    </div>
+
+                    <a href="tel:8453915151"
+                        class="ml-4 bg-teal-500 hover:bg-teal-400 px-6 py-2.5 rounded-full font-bold shadow-lg shadow-teal-500/20 transition-all transform hover:-translate-y-1">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Now
+                    </a>
                 </div>
-            </a>
 
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex items-center space-x-8">
-               <a href="https://rxwallah.com/" class="block py-2 hover:bg-teal-700 rounded px-4">Home</a>
-	           <a href="https://rxwallah.com/about" class="block py-2 hover:bg-teal-700 rounded px-4">About</a>
-		       <a href="#courses" class="block py-2 hover:bg-teal-700 rounded px-4">Courses</a>
-               <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-teal-700 rounded px-4">Admissions</a>
-            
-    <div class="relative group">   
-  <button id="aboutDropdownBtn" class="hover:bg-teal-700 focus:outline-none py-2  rounded px-2 ">
-    Blogs ▾
-  </button>
-
-  
-  <div class="absolute hidden group-hover:block bg-white text-black py-2 rounded shadow-lg z-50 w-40">
-    <a href="https://rxwallah.com/blogs" class="block px-4 py-2 hover:bg-teal-100">Blogs</a>
-	 <a href="https://rxwallah.com/jobvacancy" class="block px-4 py-2 hover:bg-teal-100">Job Vacancy</a>
-     <a href="https://rxwallah.com/contacts" class="block px-4 py-2 hover:bg-teal-100">Contacts Us</a>
-  </div>
-  </div>
-			   
-			   
-                <!-- ✅ Call Now Button (Desktop) -->
-                <a href="tel:8453915151" 
-               style="background-color: #0099a1;" 
-               class="ml-4 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg transition duration-300">
-             📞 Call Now
-			   </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="lg:hidden">
-                <button id="menu-btn" class="text-white focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
+                <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-        </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-2">
-        <a href="https://rxwallah.com/" class="block py-2 hover:bg-teal-700 rounded px-4">Home</a>
-	    <a href="https://rxwallah.com/about" class="block py-2 hover:bg-teal-700 rounded px-4">About</a>
-		<a href="https://rxwallah.com/jobvacancy" class="block py-2 hover:bg-teal-700 rounded px-4">Job Vacancy</a>
-		<a href="#courses" class="block py-2 hover:bg-teal-700 rounded px-4">Courses</a>
-        <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-teal-700 rounded px-4">Admissions</a>
-        <a href="https://rxwallah.com/blogs" class="block py-2 hover:bg-teal-700 rounded px-4">Blogs</a>
-        <a href="https://rxwallah.com/contacts" class="block py-2 hover:bg-teal-700 rounded px-4">Contacts Us</a>
-		<a href="https://rxwallah.com/policy" class="block py-2 hover:bg-teal-700 rounded px-4">Privacy Policy</a>
-            
+            <div id="mobile-menu" class="lg:hidden flex flex-col space-y-2 mt-1">
+                <a href="https://rxwallah.com/?home" class="py-2 px-6 rounded-lg hover:bg-white/10">Home</a>
+                <a href="https://rxwallah.com/about" class="py-2 px-6 rounded-lg hover:bg-white/10">About</a>
+                <a href="https://rxwallah.com/#courses" class="py-2 px-6 rounded-lg hover:bg-white/10">Courses</a>
+                <a href="https://rxwallah-jobs-vacancy-medical.gt.tc/?rxwallah.com/jobvacancy"
+                    class="py-2 px-6 rounded-lg hover:bg-white/10">Jobs Vacancy</a>
+                <a href="https://rxwallah.com/contacts" class="py-2 px-6 rounded-lg hover:bg-white/10">Admission</a>
+                <a href="https://rxwallah.com/blogs" class="py-2 px-6 rounded-lg hover:bg-white/10">Blogs</a>
+                <a href="https://rxwallah.com/contacts" class="py-2 px-6 rounded-lg hover:bg-white/10">Contact Us</a>
 
-
-          
-            <!-- ✅ Call Now Button (Mobile) with custom color -->
-<a href="tel:8453915151" file:///F:/Rx%20Wallah/image/hero.png
-   style="background-color: #0099a1;" 
-   class="block mt-2 py-2 hover:bg-green-600 text-white text-center rounded-full shadow-md px-4 transition duration-300">
-   📞 Call Now
-</a>
-
-        </div>
-    </div>
-</nav>
-<hr>
-<hr>
-
-
-
-
-
-
-
-  <section class="hero pt-20">
-  <div class="hero-content">
-    <div class="hero-inner">
-      <div class="hero-image">
-        <img src="image/hero.png" alt="Education Graphic">
-      </div>
-
-      <div class="hero-text">
-        <h1 style="font-size : 35px"><b>Welcome to <i class="text-orange-700">Rx Wallah </i> <br> – Your Trusted Online Pharmacy and Learning Hub
-</b></h1>
-        <p>We are building a modern online pharmacy platform where students, professionals, and healthcare enthusiasts can access everything they need in one place.
-</p>
-
-        <a href="#courses" class="btn">Start Learning Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-<section id="courses" class="courses">
- <h1 style="font-size: 25px; color: #1e3a8a; font-weight: bold; margin-bottom: 20px;">Available Pharmacy Courses</h1> 
-  <div class="course-grid">
-
-
-    <a href="https://rxwallah.com/pharmd" class="course-card">
-      <h3><b>Pharm D</b></h3>
-      <p>Doctor of Pharmacy — 6 year professional program.</p>
-    </a>
-
-    <a href="https" class="course-card">
-      <h3><b>B Pharmacy</b></h3>
-      <p>Bachelor of Pharmacy — 4 year undergraduate program.</p>
-    </a>
-
-    <a href="https://rxwallah.com/dpharm" class="course-card">
-      <h3><b>D Pharmacy</b></h3>
-      <p>Diploma of Pharmacy — 2 year diploma program.</p>
-    </a>
-
-    <a href="https://rxwallah.com/pharmdpb" class="course-card">
-      <h3><b>Pharm D (PB)</b></h3>
-      <p>Post Baccalaureate — 3 year bridge course after B Pharm.</p>
-    </a>
-	
-	<a href="https://rxwallah.com/mpharm" class="course-card">
-      <h3><b>M Pharm</b></h3>
-      <p>Master of Pharmacy (MPharm) is a 2 years course after B Pharm.</p>
-    </a>
-
-  </div>
-</section>
-
-
-
-<section id="jobs" class="py-16 bg-gray-50"> <div class="container mx-auto max-w-3xl px-6">
-    
-    <div class="bg-white rounded-lg shadow-lg p-8 py-10 text-center border-l-8 border-transparent hover:shadow-2xl hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-1.5 animate-fade-in-up" style="animation-delay: 0.6s;">
-    
-        <div class="mb-4">
-      <i class="fas fa-users text-5xl text-teal-600 animate-pulse"></i>
-    </div>
-        
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          We're Hiring!
-        </h2>
-        
-        <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-          Want to join the Rx Wallah team? We're looking for passionate individuals to help us revolutionize pharmacy education.
-        </p>
-        
-        <a href="https://rxwallah.com/jobvacancy" class="inline-block bg-orange-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105">
-          See Job Vacancies
-        </a>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-<section id="image" class="image" style="padding: 40px 20px; text-align: center; background-color: #f9f9f9;">
-    <h1 style="font-size: 25px; color: #1e3a8a; font-weight: bold; margin-bottom; mb-50;"><u>Informations - Rx Wallah</u></h1>
-    
-    <div class="image-grid" style="display: flex; flex-direction: column; align-items: center;">
-        
-        <a href="https://yt.openinapp.co/iigaf" target="_blank">
-            <img src="image/yt1.jpg" alt="Students Learning" 
-                 style="width: 100%; max-width: 700px; border-radius: 10px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        </a>
-<a href="https://yt.openinapp.co/iigaf" target="_blank">
-        <p style="max-width: 800px; font-size: 20px; color: #0000FF; line-height: 1.6; margin: 0 20px;">
-           Pharm.d in detail | Doctor of pharmacy  2025 admission process  <strong>- Rx Wallah.</strong>
-        </p>
-		</a>
-		
-		
-		 <a href="httpshttps://yt.openinapp.co/8d13c" target="_blank">
-            <img src="image/yt2.jpg" alt="Students Learning" 
-                 style="width: 100%; max-width: 700px; border-radius: 10px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        </a>
-         
-		 <a href="httpshttps://yt.openinapp.co/8d13c" target="_blank">
-        <p style="max-width: 800px; font-size: 20px; color: #0000FF; line-height: 1.6; margin: 0 20px;">
-            Best career options after 12th l medical courses l Best medical courses 2025 <strong>- Rx Wallah.</strong>
-        </p>
-		</a>
-    </div>
-</section>
-
-
-<hr>
-
-
-<section>
- <h1 style="font-size: 25px; color: #1e3a8a; font-weight: bold; margin-bottom; mb-50; text-align: center;"> FOLLOW US :</h2>
-  <div class="social-bar">
-          
-    <a href="https://www.instagram.com/salimshakirr?igsh=Zno3ZWc0d3ozY3lo" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="https://youtube.com/@salimshakir?si=_G6PIq3wOjqKkt9Z" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
-    </a>
-    <a href="https://www.facebook.com" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://www.linkedin.com" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
-    </a>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-
- <footer class="footer">
-  <div class="footer-container">
-
-    <div class="footer-col logo-col">
-      <div class="logo">
-        <img src="image/logo.png" alt="Logo" style="height: 40px;">
-      </div>
-     
-    </div>
-    <div class="footer-col">
-      <h3>Quick Links:</h3>
-      <ul>
-        <li><a href="https://rxwallah.com/">Home Page</a></li>
-        <li><a href="#courses">All Courses</a></li>
-        <li><a href="https://rxwallah.com/pdf">PDF Notes</a></li>
-        <li><a href="https://rxwallah.com/Clinicalresearch">Clinical Research</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-     <h3>Improtant Links:</h3>
-      <ul>
-        <li><a href="https://rxwallah.com/policy">Privacy Policy</a></li>
-        <li><a href="https://rxwallah.com/about">About Us</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-         <li><a href="https://rxwallah.com/contacts">Admission</a></li>
-		 <li><a href="https://rxwallah.com/blogs">Blogs</a></li>
-      </ul>
-    </div>
-
-  </div>
-
- <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>©2025 by 
-				<a href="https"  class="text-blue-500 hover:underline">
-				Rx Wallah
-				</a>
-				| All Rights Reserved.</p>
+                <a href="tel:8453915151" class="py-2 bg-teal-600 text-center rounded-xl font-bold">Call Now</a>
             </div>
-			
-</footer>
+        </div>
+    </nav>
+
+    <header class="hero-gradient min-h-screen flex items-center pt-28 pb-20">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-8 order-2 lg:order-1">
+                <span
+                    class="inline-block px-4 py-1 bg-teal-500/20 border border-teal-500/30 rounded-full text-teal-300 text-sm font-semibold tracking-wider uppercase">
+                    Revolutionizing Pharmacy Education
+                </span>
+                <h1 class="text-3xl lg:text-5xl font-bold leading-tight mb-4">
+                    Welcome to <i class="text-orange-500">Rx Wallah</i> <br>
+                    – Your Trusted Online Pharmacy
+                </h1>
+
+                <p>We are building a modern online pharmacy platform where students, professionals, and healthcare
+                    enthusiasts can access everything they need in one place.</p>
+
+                <div class="flex flex-wrap items-center gap-4 mt-0"> <a href="https://rxwallah.com/#courses"
+                        class="btn-dynamic btn-course text-white px-6 py-2.5 rounded-full font-bold text-base hover:-translate-y-1 transition-all">
+                        <span>Courses</span>
+                        <i class="fas fa-graduation-cap ml-2"></i>
+                    </a>
+
+                    <a href="https://rxwallah.com/jobvacancy"
+                        class="btn-dynamic btn-jobs text-white px-6 py-2.5 rounded-full font-bold text-base hover:-translate-y-1 transition-all">
+                        <span>Jobs Vacancy</span>
+                        <i class="fas fa-briefcase ml-2 text-teal-400"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 flex justify-center">
+                <img src="image/hero.png" alt="Education" class="float-anim w-full max-w-lg drop-shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <section id="courses" class="courses-section">
+        <div class="section-header">
+            <h2>Available Pharmacy Courses</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="course-grid">
+
+            <a href="https://rxwallah.com/pharmd" class="course-card">
+                <span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <div class="icon-box teal">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <h3>Pharm D</h3>
+                <p>Doctor of Pharmacy — 6 year professional program for clinical experts.</p>
+            </a>
+
+            <a href="https://rxwallah.com/bpharm" class="course-card">
+                <span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <div class="icon-box blue">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>B Pharmacy</h3>
+                <p>Bachelor of Pharmacy — 4 year undergraduate program in core sciences.</p>
+            </a>
+
+            <a href="https://rxwallah.com/dpharm" class="course-card">
+                <span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <div class="icon-box orange">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <h3>D Pharmacy</h3>
+                <p>Diploma of Pharmacy — 2 year program focusing on practice.</p>
+            </a>
+
+            <a href="https://rxwallah.com/pharmdpb" class="course-card">
+                <span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <div class="icon-box purple">
+                    <i class="fas fa-notes-medical"></i>
+                </div>
+                <h3>Pharm D (PB)</h3>
+                <p>Post Baccalaureate — 3 year bridge course after B Pharm.</p>
+            </a>
+
+            <a href="https://rxwallah.com/mpharm" class="course-card">
+                <span class="arrow"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                <div class="icon-box pink">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>M Pharm</h3>
+                <p>Master of Pharmacy — 2 year advanced specialization research course.</p>
+            </a>
+
+        </div>
+    </section>
+
+
+    <section class="relative py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+
+        <!-- Glow Effects -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-teal-500/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 -right-32 w-96 h-96 bg-cyan-400/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+            <!-- Badge -->
+            <span
+                class="inline-flex items-center gap-2 px-5 py-2 mb-6 rounded-full bg-teal-500/10 text-teal-400 text-sm font-semibold tracking-wide">
+                🚀 Careers at Rx Wallah
+            </span>
+
+            <!-- Heading -->
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-6">
+                Build Your Career in
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">
+                    Pharmacy & Medical
+                </span>
+            </h2>
+
+            <!-- Description -->
+            <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto mb-12">
+                Work with a fast-growing education platform empowering pharmacy students across India.
+                If you believe in impact, growth, and real learning — you belong here.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="https://rxwallah-jobs-vacancy-medical.gt.tc/?rxwallah.com/jobvacancy"
+                    class="group inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-bold text-lg shadow-xl hover:shadow-teal-500/40 transition-all duration-300 hover:scale-105">
+                    View Open Positions
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <a href="https://rxwallah.com/about"
+                    class="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full border border-slate-700 text-slate-300 font-semibold hover:border-teal-400 hover:text-white transition">
+                    Why Work With Us?
+                    <i class="fas fa-circle-info"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="rx-info" class="rx-info">
+        <div class="rx-container">
+
+            <h2 class="rx-title">
+                Information Hub – <br><span>Rx Wallah</span>
+            </h2>
+
+            <div class="rx-grid">
+
+                <!-- Card 1 -->
+                <a href="https://yt.openinapp.co/iigaf" target="_blank" class="rx-card">
+                    <div class="rx-image">
+                        <img src="image/yt1.jpg" alt="Pharm.D Admission Details">
+                    </div>
+                    <div class="rx-content">
+                        <h3>Pharm.D in Detail (2025)</h3>
+                        <p>Doctor of Pharmacy admission process, eligibility, scope & career path explained clearly.</p>
+                        <span class="rx-link">Watch on YouTube →</span>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="https://yt.openinapp.co/8d13c" target="_blank" class="rx-card">
+                    <div class="rx-image">
+                        <img src="image/yt2.jpg" alt="Medical Courses After 12th">
+                    </div>
+                    <div class="rx-content">
+                        <h3>Best Medical Courses After 12th</h3>
+                        <p>Top medical & pharmacy career options after 12th with future scope in 2025.</p>
+                        <span class="rx-link">Watch on YouTube →</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="follow-section">
+        <h2 class="follow-title">Follow Rx Wallah</h2>
+
+        <div class="social-bar">
+            <a href="https://www.instagram.com/salimshakirr?igsh=Zno3ZWc0d3ozY3lo" target="_blank"
+                aria-label="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+
+            <a href="https://youtube.com/@salimshakir?si=_G6PIq3wOjqKkt9Z" target="_blank" aria-label="YouTube">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+            </a>
+
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+            </a>
+        </div>
+    </section>
 
 
 
 
 
 
+    <footer class="bg-slate-950 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="space-y-4">
+                <a href="https://rxwallah.com/ ">
+                    <img src="image/logo.png" alt="Footer Logo" class="h-12">
+                </a>
+                <p class="text-slate-500 text-sm">Empowering pharmacy students with quality education and digital
+                    resources.</p>
+
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-slate-400">
+                    <li><a href="https://rxwallah.com/" class="hover:text-white transition">Home</a></li>
+                    <li><a href="https://rxwallah.com/#courses" class="hover:text-white transition">All Courses</a></li>
+                    <li><a href="https://rxwallah.com/pharmdnote" class="hover:text-white transition">PDF Notes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-lg mb-6">Policies</h4>
+                <ul class="space-y-4 text-slate-400">
+                    <li><a href="https://rxwallah.com/#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="https://rxwallah.com/about" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-lg mb-6">Popular Courses</h4>
+                <ul class="space-y-4 text-slate-400">
+                    <li><a href="https://rxwallah.com/pharmd" class="hover:text-white transition">Pharm.D</a></li>
+                    <li><a href="https://rxwallah.com/bpharm" class="hover:text-white transition">B.Pharm</a></li>
+                    <li><a href="https://rxwallah.com/dpharm" class="hover:text-white transition">D.Pharm</a></li>
+                    <li><a href="https://rxwallah.com/mpharm" class="hover:text-white transition">M.Pharm</a></li>
+                    <li><a href="https://rxwallah.com/pharmdpb" class="hover:text-white transition">Pharm d (pb)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>©2025 by
+                <a href="https" class="text-blue-500 hover:underline">
+                    Rx Wallah
+                </a>
+                - Built with ❤️ for Pharmacy Students.
+            </p>
+        </div>
 
 
 
+    </footer>
 
-
-
-
-
-  <script>
+    <script>
         // Mobile menu toggle
-        document.getElementById('menu-btn').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
         });
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Sticky Nav Blur change on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
         });
-         </script>
-		 
-		 
-		 
-  <script>
-    function sendMessage(event) {
-      event.preventDefault();
-      alert("Thanks! Your message has been received.");
-    }
-  </script>
-
-
+    </script>
 </body>
+
 </html>
-
-
-
